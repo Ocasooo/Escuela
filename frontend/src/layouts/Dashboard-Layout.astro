@@ -1,0 +1,315 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="../../public/img/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		<script src="https://kit.fontawesome.com/aef010b255.js" crossorigin="anonymous"></script>
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+        <body class="invisible m-0 text-base antialiased font-normal dark:bg-slate-900 leading-default bg-gray-50 text-slate-500">
+            <div class="absolute w-full bg-blue-500 dark:hidden min-h-75"></div>
+            <!-- sidenav  -->
+            <aside class="fixed flex-wrap items-center inset-y-0 justify-between block w-full p-0 my-4 antialiased transition-transform duration-200 -translate-x-full bg-white border-0 shadow-xl dark:shadow-none dark:bg-slate-850 max-w-64 ease-nav-brand z-990 xl:ml-6 rounded-2xl xl:left-0 xl:translate-x-0" aria-expanded="false">
+              <div class="h-15 top-0 background">
+                <i class="absolute top-0 right-0 p-4 opacity-50 cursor-pointer fas fa-times dark:text-white text-slate-400 xl:hidden" sidenav-close></i>
+                <a class="block px-8 py-6 m-0 text-sm whitespace-nowrap dark:text-white text-slate-700" href="/inicio" target="_blank">
+                  <img src="../../public/img/sidebar-icon.png" class="inline h-full max-w-full transition-all duration-200 dark:hidden ease-nav-brand max-h-8" alt="main_logo" />
+                  <span class="ml-1 font-semibold transition-all duration-200 ease-nav-brand">Dashboard</span>
+                </a>
+              </div>
+        
+              <hr class="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent" />
+        
+              <div class="sidebar-custom items-center block w-auto h-160 grow basis-full overflow-y-auto">
+                <ul class="flex flex-col pl-0 mb-0">
+                  <li class="mt-0.5 w-full">
+                    <a class="py-2.7 dark:text-white dark:opacity-80 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap rounded-lg px-4  transition-colors" id="navbar-inicio" href="/inicio">
+                      <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                        <i class="fa-solid fa-house"></i>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Inicio</span>
+                    </a>
+                  </li>
+                  
+                  <li class="w-full mt-4">
+                    <h6 class="pl-6 ml-2 text-xs font-bold leading-tight uppercase dark:text-white opacity-60">CORRECCIÓN</h6>
+                  </li>
+        
+                  <li class="mt-0.5 w-full">
+                    <a class="dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors rounded-lg" id="navbar-EyM" href="/examen-y-materia">
+                      <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                        <i class="fa-solid fa-file-invoice"></i>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Examen y Materias</span>
+                    </a>
+                  </li>
+        
+                  <li class="mt-0.5 w-full">
+                    <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors rounded-lg" href="../pages/billing.html">
+                      <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center fill-current stroke-0 text-center xl:p-2.5">
+                        <i class="relative top-0 text-sm leading-normal text-emerald-500 ni ni-credit-card"></i>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Prácticos</span>
+                    </a>
+                  </li>
+        
+                  <li class="mt-0.5 w-full">
+                    <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors rounded-lg" href="../pages/virtual-reality.html">
+                      <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                        <i class="relative top-0 text-sm leading-normal text-cyan-500 ni ni-app"></i>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Desempeño</span>
+                    </a>
+                  </li>
+
+                  <li class="w-full mt-4">
+                    <h6 class="pl-6 ml-2 text-xs font-bold leading-tight uppercase dark:text-white opacity-60">PLAN ACADEMICO</h6>
+                  </li>
+        
+                  <li class="mt-0.5 w-full">
+                    <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors rounded-lg" href="../pages/rtl.html">
+                      <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                        <i class="relative top-0 text-sm leading-normal text-red-600 ni ni-world-2"></i>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Plan de estudio</span>
+                    </a>
+                  </li>
+        
+                  <li class="mt-0.5 w-full">
+                    <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors rounded-lg" href="../pages/profile.html">
+                      <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                        <i class="relative top-0 text-sm leading-normal text-slate-700 ni ni-single-02"></i>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Materias</span>
+                    </a>
+                  </li>
+        
+                  <li class="mt-0.5 w-full">
+                    <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors rounded-lg" href="../pages/profile.html">
+                      <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                        <i class="relative top-0 text-sm leading-normal text-slate-700 ni ni-single-02"></i>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Aulas y horarios</span>
+                    </a>
+                  </li>
+
+                  <li class="w-full mt-4">
+                    <h6 class="pl-6 ml-2 text-xs font-bold leading-tight uppercase dark:text-white opacity-60">USUARIOS</h6>
+                  </li>
+
+                  <li class="mt-0.5 w-full">
+                    <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors rounded-lg" href="/gestion-de-usuarios">
+                      <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                        <i class="fa-solid fa-user"></i>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Gestión de usuarios</span>
+                    </a>
+                  </li>
+
+                  <li class="mt-0.5 w-full">
+                    <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors rounded-lg" href="/inscripcion-de-estudiantes">
+                      <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Inscripción de estudiantes</span>
+                    </a>
+                  </li>
+
+                  <li class="w-full mt-4">
+                    <h6 class="pl-6 ml-2 text-xs font-bold leading-tight uppercase dark:text-white opacity-60">TITULACIÓN</h6>
+                  </li>
+
+                  <li class="mt-0.5 w-full">
+                    <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors rounded-lg" href="../pages/profile.html">
+                      <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                        <i class="relative top-0 text-sm leading-normal text-slate-700 ni ni-single-02"></i>
+                      </div>
+                      <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Titulación</span>
+                    </a>
+                  </li>
+
+                
+                </ul>
+              </div>
+        
+            </aside>
+        
+            <!-- end sidenav -->
+        
+            <main class="relative h-full max-h-screen transition-all duration-200 ease-in-out xl:ml-68 rounded-xl">
+              
+              <!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+              <!-- Navbar -->
+              <!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+              <nav class="relative flex flex-wrap items-center justify-between px-0 py-2 mx-6 transition-all ease-in shadow-none duration-250 rounded-2xl lg:flex-nowrap lg:justify-start" navbar-main navbar-scroll="false">
+                  
+                  
+                <div class="flex items-center justify-between w-full px-4 py-1 mx-auto flex-wrap-inherit">
+                  <!-- Inicio ubicacion dentro del dashboard-->
+                  <nav>
+                    <!-- breadcrumb -->
+                    <ol class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
+                      <li class="text-sm leading-normal">
+                        <a class="text-white opacity-50" href="javascript:;">Pages</a>
+                      </li>
+                      <li class="text-sm pl-2 capitalize leading-normal text-white before:float-left before:pr-2 before:text-white before:content-['/']" aria-current="page">Dashboard</li>
+                    </ol>
+                    <h6 class="mb-0 font-bold text-white capitalize">Dashboard</h6>
+                  </nav>
+                  <!-- Inicio ubicacion dentro del dashboard-->
+        
+                  <!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+                  <!-- Navbar Search - sign in - options notifications -->
+                  <!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+        
+                  <div class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto">
+                    
+                    <!-- Buscador nav -->
+                    <div class="flex items-center md:ml-auto md:pr-4">
+                      <div class="relative flex flex-wrap items-stretch w-full transition-all rounded-lg ease">
+                        <span class="text-sm ease leading-5.6 absolute z-50 -ml-px flex h-full items-center whitespace-nowrap rounded-lg rounded-tr-none rounded-br-none border border-r-0 border-transparent bg-transparent py-2 px-2.5 text-center font-normal text-slate-500 transition-all">
+                          <i class="fas fa-search"></i>
+                        </span>
+                        <input type="text" class="pl-9 text-sm focus:shadow-primary-outline ease w-1/100 leading-5.6 relative -ml-px block min-w-0 flex-auto rounded-lg border border-solid border-gray-300 dark:bg-slate-850 dark:text-white bg-white bg-clip-padding py-2 pr-3 text-gray-700 transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none focus:transition-shadow" placeholder="Type here..." />
+                      </div>
+                    </div>
+                    <!-- Buscador nav -->
+                    
+                    <!-- Sign in Menu(flex) config notificacion box -->
+                    <ul class="flex flex-row justify-end pl-0 mb-0 list-none md-max:w-full">
+                      <!-- online builder btn  -->
+                      <!-- <li class="flex items-center">
+                        <a class="inline-block px-8 py-2 mb-0 mr-4 text-xs font-bold text-center text-blue-500 uppercase align-middle transition-all ease-in bg-transparent border border-blue-500 border-solid rounded-lg shadow-none cursor-pointer leading-pro hover:-translate-y-px active:shadow-xs hover:border-blue-500 active:bg-blue-500 active:hover:text-blue-500 hover:text-blue-500 tracking-tight-rem hover:bg-transparent hover:opacity-75 hover:shadow-none active:text-white active:hover:bg-transparent" target="_blank" href="https://www.creative-tim.com/builder/soft-ui?ref=navbar-dashboard&amp;_ga=2.76518741.1192788655.1647724933-1242940210.1644448053">Online Builder</a>
+                      </li> -->
+                      <li class="flex items-center">
+                        <a href="#" class="block px-0 py-2 text-sm font-semibold text-white transition-all ease-nav-brand">
+                          <i class="fa fa-user sm:mr-1"></i>
+                          <span class="hidden sm:inline">Sign In</span>
+                        </a>
+                      </li>
+                      <li class="flex items-center pl-4 xl:hidden" id="display-menu">
+                        <a href="javascript:;" class="block p-0 text-sm text-white transition-all ease-nav-brand" sidenav-trigger>
+                          <div class="w-4.5 overflow-hidden">
+                            <i class="ease mb-0.75 relative block h-0.5 rounded-sm bg-white transition-all"></i>
+                            <i class="ease mb-0.75 relative block h-0.5 rounded-sm bg-white transition-all"></i>
+                            <i class="ease relative block h-0.5 rounded-sm bg-white transition-all"></i>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="flex items-center px-4">
+                        <a href="javascript:;" class="p-0 text-sm text-white transition-all ease-nav-brand">
+                          <i fixed-plugin-button-nav class="cursor-pointer fa fa-cog"></i>
+                          <!-- fixed-plugin-button-nav  -->
+                        </a>
+                      </li>
+        
+                      <!-- notifications -->
+        
+                      <li class="relative flex items-center pr-2">
+                        <p class="hidden transform-dropdown-show"></p>
+                        <a href="javascript:;" class="block p-0 text-sm text-white transition-all ease-nav-brand" dropdown-trigger aria-expanded="false">
+                          <i class="cursor-pointer fa fa-bell"></i>
+                        </a>
+        
+                        <ul dropdown-menu class="text-sm transform-dropdown before:font-awesome before:leading-default before:duration-350 before:ease lg:shadow-3xl duration-250 min-w-44 before:sm:right-8 before:text-5.5 pointer-events-none absolute right-0 top-0 z-50 origin-top list-none rounded-lg border-0 border-solid border-transparent dark:shadow-dark-xl dark:bg-slate-850 bg-white bg-clip-padding px-2 py-4 text-left text-slate-500 opacity-0 transition-all before:absolute before:right-2 before:left-auto before:top-0 before:z-50 before:inline-block before:font-normal before:text-white before:antialiased before:transition-all before:content-['\f0d8'] sm:-mr-6 lg:absolute lg:right-0 lg:left-auto lg:mt-2 lg:block lg:cursor-pointer">
+                        </ul>
+                      </li>
+                    </ul>
+                    <!-- FIN Sign in Menu(flex) config notificacion box -->
+                  </div>
+                </div>
+              </nav>
+        
+              <slot /> <!--Contenido variable -->
+              <!-- end Navbar -->
+        
+              <!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+              <!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+              <!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+              <!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+        
+            </main>
+          </body>
+        </html>
+        
+<script>
+          //Funcionalidad del focus sobre los items del side menu
+          (function focusNavbar(){
+            const currentPage : string = window.location.pathname.split("/").pop() ?? ""
+            clearFocus()
+            focus(currentPage)
+          })()
+
+          function focus(currentPath: string){
+            if('examen-y-materia' == currentPath){
+              document.querySelector('#navbar-EyM')?.classList.add("bg-blue-500/13","font-semibold","text-slate-700")
+            }
+            if('inicio' == currentPath){
+              document.querySelector('#navbar-inicio')?.classList.add("bg-blue-500/13","font-semibold","text-slate-700")
+            }
+          }
+
+          function clearFocus(){
+            document.querySelector('#navbar-EyM')?.classList.remove("bg-blue-500/13","font-semibold","text-slate-700")
+            document.querySelector('#navbar-inicio')?.classList.remove("bg-blue-500/13","font-semibold","text-slate-700")
+          }
+
+          // Funcionalidad del menu para esconderse y mostrarse en resoluciones menores
+          const navbar = document.querySelector(".-translate-x-full")
+        
+          document.querySelector("#display-menu")?.addEventListener("click",()=>{
+            if(navbar?.classList.contains("-translate-x-full")){
+              navbar?.classList.add("+translate-x-full")
+              navbar?.classList.remove("-translate-x-full")
+            }
+            else{
+              navbar?.classList.remove("+translate-x-full")
+              navbar?.classList.add("-translate-x-full")
+            }
+          })
+
+          //Mostrar el contenido cuando termina de cargar el contenido
+          document.addEventListener("DOMContentLoaded", function() {
+          document.body.style.visibility = "visible";
+  });
+</script>
+
+
+<style>
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+  .sexo{border: 1px solid red;}
+/* Personalizar la scrollbar y asegurarse de que quede dentro del contenedor */
+.sidebar-custom::-webkit-scrollbar {
+  width: 6px;  /* Ajusta el ancho para que no ocupe mucho espacio */
+}
+
+.sidebar-custom::-webkit-scrollbar-track {
+  background: transparent;  /* Aseguramos que el track sea transparente */
+}
+
+.sidebar-custom::-webkit-scrollbar-thumb {
+  background-color: #888;  /* Color del scrollbar */
+  border-radius: 10px;  /* Redondear la scrollbar para seguir el borde */
+  border: 3px solid transparent; /* Agrega espacio alrededor */
+}
+
+.sidebar-custom::-webkit-scrollbar-thumb:hover {
+  background: #555;  /* Cambia el color al hacer hover */
+}
+</style>
