@@ -2,9 +2,12 @@
 import DashboardLayout from '../layouts/Dashboard-Layout.astro';
 ---
 
-<DashboardLayout title="Gestion de inscripción de estudiantes" path='inscripcion de estudiantes'>
-    <h1 class="mx-20 w-auto text-white font-bold text-5xl mt-10 mb-10">Gestión de usuarios</h1>
+<DashboardLayout title='Gestión de examenes y materias' path='Examenes y materias'>
+    <h1 class="mx-20 w-auto text-white font-bold text-5xl mt-10 mb-10">Gestión de examenes y materias</h1>
     <section class="mx-10 w-auto bg-white rounded-2xl shadow-lg h-p pt-5">
+      <a class="rounded-3xl bg-blue-700 px-10 py-1.5 text-white text-sm ml-10 mr-0" href="/cargar-practico">Selecionar curso</a>
+      <a class="rounded-3xl bg-blue-700 px-10 py-1.5 text-white text-sm ml-10 mr-0" href="/cargar-practico">Cargar nota de examen</a>
+      <a class="rounded-3xl bg-blue-700 px-10 py-1.5 text-white text-sm ml-10 mr-0" href="/cargar-practico">Cargar nota de materia</a>
             <!------------------------TABLE-------------------- -->
             <!------------------------TABLE-------------------- -->
           <div class="mb-10 mt-5">
@@ -28,7 +31,8 @@ import DashboardLayout from '../layouts/Dashboard-Layout.astro';
                       <tr>
                         <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">DNI</th>
                         <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">Nombre y apellido</th>
-                        <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">Plan de estudio</th>
+                        <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">Descripción</th>
+                        <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">Calificación</th>
                         <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">Opciones</th>
                       </tr>
                     </thead>
@@ -42,10 +46,12 @@ import DashboardLayout from '../layouts/Dashboard-Layout.astro';
                           Jorgito Serenito
                         </td>
                         <td class="border-t-0 px-6 align-center border-l-0 border-r-0 whitespace-nowrap p-4 font-bold text-xs">
-                          Alumno
+                          Descripcion del examen
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 whitespace-nowrap p-4 font-bold text-xs">
+                          8.00
                         </td>
                         <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          <button class="mr-2 rounded-3xl bg-blue-700 py-1 px-3 rounded-3xl text-white text-xs">Más Información</button>
                           <button class="mr-2 rounded-3xl bg-sky-400 w-6 h-6"><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></button>
                           <button class="rounded-3xl bg-red-600 w-6 h-6"><i class="fa-solid fa-xmark" style="color: #000000;"></i></button>
                         </td>
@@ -55,5 +61,5 @@ import DashboardLayout from '../layouts/Dashboard-Layout.astro';
                 </div>
               </div>
           </div>
-        </section>
+    </section>
 </DashboardLayout>
