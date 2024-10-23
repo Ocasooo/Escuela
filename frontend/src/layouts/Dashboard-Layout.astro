@@ -3,9 +3,10 @@ import '../css/style.css';
 interface Props {
 	title: string;
   path: string;
+  pageTitle:string;
 }
 
-const { title,path } = Astro.props;
+const { title,path,pageTitle } = Astro.props;
 
 ---
 
@@ -213,7 +214,11 @@ const { title,path } = Astro.props;
                 </div>
               </nav>
         
-              <slot /> <!--Contenido variable -->
+              <h1 class="mx-20 w-auto text-white font-bold text-5xl mt-10 mb-10">{pageTitle}</h1>
+              <section class="mx-10 w-auto bg-white rounded-2xl shadow-xl h-p pt-5">
+                <slot /> <!--Contenido variable -->
+              </section>
+              
               <!-- end Navbar -->
 
               <!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -291,8 +296,10 @@ body{
   font-family: 'Lato', sans-serif;
 }
 
-  .sexo{border: 1px solid red;}
-/* Personalizar la scrollbar y asegurarse de que quede dentro del contenedor */
+.h-p{
+  height: 795px;
+}
+
 .sidebar-custom::-webkit-scrollbar {
   width: 6px;  /* Ajusta el ancho para que no ocupe mucho espacio */
 }

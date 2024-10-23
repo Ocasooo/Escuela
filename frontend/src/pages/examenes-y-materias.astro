@@ -1,13 +1,12 @@
 ---
 import DashboardLayout from '../layouts/Dashboard-Layout.astro';
+import DropdownButton from '../components/dropdownButton.astro';
 ---
 
-<DashboardLayout title='Gestión de examenes y materias' path='Examenes y materias'>
-    <h1 class="mx-20 w-auto text-white font-bold text-5xl mt-10 mb-10">Gestión de examenes y materias</h1>
-    <section class="mx-10 w-auto bg-white rounded-2xl shadow-lg h-p pt-5">
-      <a class="rounded-3xl bg-blue-700 px-10 py-1.5 text-white text-sm ml-10 mr-0" href="/cargar-practico">Selecionar curso</a>
-      <a class="rounded-3xl bg-blue-700 px-10 py-1.5 text-white text-sm ml-10 mr-0" href="/cargar-practico">Cargar nota de examen</a>
-      <a class="rounded-3xl bg-blue-700 px-10 py-1.5 text-white text-sm ml-10 mr-0" href="/cargar-practico">Cargar nota de materia</a>
+<DashboardLayout title='Gestión de examenes y materias' path='Examenes y materias' pageTitle='Gestión de examenes y materias'>
+      <DropdownButton buttonText='Seleccionar curso' options={["matematicas","carpinteria","programacion"]}></DropdownButton>
+      <a class="rounded-3xl bg-blue-700 px-10 py-1.5 text-white text-sm ml-10 mr-0" href="/formulario-cargar-examen">Cargar nota de examen</a>
+      <a class="rounded-3xl bg-blue-700 px-10 py-1.5 text-white text-sm ml-10 mr-0" href="/formulario-nota-materia">Cargar nota de materia</a>
             <!------------------------TABLE-------------------- -->
             <!------------------------TABLE-------------------- -->
           <div class="mb-10 mt-5">
@@ -61,5 +60,4 @@ import DashboardLayout from '../layouts/Dashboard-Layout.astro';
                 </div>
               </div>
           </div>
-    </section>
 </DashboardLayout>
