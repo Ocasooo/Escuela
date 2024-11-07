@@ -1,7 +1,7 @@
 package com.example.Crud.service;
 
-import com.example.Crud.entity.Mensaje;
-import com.example.Crud.repository.MensajeRepository;
+import com.example.Crud.entity.Realiza;
+import com.example.Crud.repository.RealizaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,19 +9,19 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class MensajeService {
+public class RealizaService {
     @Autowired
-    MensajeRepository personalRepository;
+    RealizaRepository personalRepository;
 
-    public List<Mensaje> getAllPersonal(){
+    public List<Realiza> getAllPersonal(){
         return personalRepository.findAll();
     }
 
-    public Optional<Mensaje> getPersonalById(int id){
+    public Optional<Realiza> getPersonalById(int id){
         return personalRepository.findById(id);
     }
 
-    public void insertOrUpdatePersonal(Mensaje personal){
+    public void insertOrUpdatePersonal(Realiza personal){
         personalRepository.save(personal);
     }
 

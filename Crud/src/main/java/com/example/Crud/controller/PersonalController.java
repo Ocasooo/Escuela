@@ -22,11 +22,11 @@ public class PersonalController {
 
     @GetMapping("/{personalId}")
     public Optional<Personal> getPersonalById(@PathVariable("personalId") int id){
-        return personalService.getPesonalById(id);
+        return personalService.getPersonalById(id);
     }
 
     @PostMapping
-    public Clase create(@RequestBody Personal personal){
+    public Personal create(@RequestBody Personal personal){
         personalService.insertOrUpdatePersonal(personal);
         return personal;
     }

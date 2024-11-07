@@ -1,9 +1,9 @@
 package com.example.Crud.repository;
 
-import com.example.Crud.entity.Personal;
+import com.example.Crud.entity.Buzon;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PersonalRepository extends JpaRepository<Personal, Integer> {
+public interface BuzonRepository extends JpaRepository<Buzon, Integer> {
 }
