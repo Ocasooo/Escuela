@@ -13,24 +13,12 @@ public class Foro {
     //generacion de id autoincremental
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int dni;
+    private int foroId;
 
-    private String nombre;
+    private int materilId;
 
-    private String apellido;
+    private String descripcion;
 
-    private String correo;
-
-    private String contraseña;
-
-    private String sexo;
-
-    private Date fechaDeNacimiento;
-
-    private int horas;
-
-    private String especialidad;
-
-    private int EsAdministrativo;
+    private String titulo;
 
 }

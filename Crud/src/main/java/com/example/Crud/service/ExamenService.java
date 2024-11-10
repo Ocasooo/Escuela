@@ -1,31 +1,32 @@
 package com.example.Crud.service;
 
-import com.example.Crud.entity.Examen;
-import com.example.Crud.repository.ExamenRepository;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import com.example.Crud.entity.Examen;
+import com.example.Crud.repository.ExamenRepository;
 
 @Service
 public class ExamenService {
     @Autowired
-    ExamenRepository personalRepository;
+    ExamenRepository examenRepository;
 
-    public List<Examen> getAllPersonal(){
-        return personalRepository.findAll();
+    public List<Examen> getAllExamen(){
+        return examenRepository.findAll();
     }
 
-    public Optional<Examen> getPersonalById(int id){
-        return personalRepository.findById(id);
+    public Optional<Examen> getExamenById(int id){
+        return examenRepository.findById(id);
     }
 
-    public void insertOrUpdatePersonal(Examen personal){
-        personalRepository.save(personal);
+    public void insertOrUpdateExamen(Examen examen){
+        examenRepository.save(examen);
     }
 
-    public void deletePersonal(int id){
-        personalRepository.deleteById(id);
+    public void deleteExamen(int id){
+        examenRepository.deleteById(id);
     }
 }

@@ -11,21 +11,21 @@ import java.util.Optional;
 @Service
 public class MateriaService {
     @Autowired
-    MateriaRepository personalRepository;
+    MateriaRepository materiaRepository;
 
-    public List<Materia> getAllPersonal(){
-        return personalRepository.findAll();
+    public List<Materia> getAllMateria(){
+        return materiaRepository.findAll();
     }
 
-    public Optional<Materia> getPersonalById(int id){
-        return personalRepository.findById(id);
+    public Optional<Materia> getMateriaById(int id){
+        return materiaRepository.findById(id);
     }
 
-    public void insertOrUpdatePersonal(Materia personal){
-        personalRepository.save(personal);
+    public void insertOrUpdateMateria(Materia materia){
+        materiaRepository.save(materia);
     }
 
-    public void deletePersonal(int id){
-        personalRepository.deleteById(id);
+    public void deleteMateria(int id){
+        materiaRepository.deleteById(id);
     }
 }

@@ -11,21 +11,21 @@ import java.util.Optional;
 @Service
 public class ImparteService {
     @Autowired
-    ImparteRepository personalRepository;
+    ImparteRepository imparteRepository;
 
-    public List<Imparte> getAllPersonal(){
-        return personalRepository.findAll();
+    public List<Imparte> getAllImparte(){
+        return imparteRepository.findAll();
     }
 
-    public Optional<Imparte> getPersonalById(int id){
-        return personalRepository.findById(id);
+    public Optional<Imparte> getImparteById(int id){
+        return imparteRepository.findById(id);
     }
 
-    public void insertOrUpdatePersonal(Imparte personal){
-        personalRepository.save(personal);
+    public void insertOrUpdateImparte(Imparte imparte){
+        imparteRepository.save(imparte);
     }
 
-    public void deletePersonal(int id){
-        personalRepository.deleteById(id);
+    public void deleteImparte(int id){
+        imparteRepository.deleteById(id);
     }
 }

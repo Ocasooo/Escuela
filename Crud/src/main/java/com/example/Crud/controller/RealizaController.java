@@ -1,38 +1,45 @@
 package com.example.Crud.controller;
 
-import com.example.Crud.entity.Realiza;
-import com.example.Crud.service.RealizaService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.Crud.entity.Realiza;
+import com.example.Crud.service.RealizaService;
+
 @RestController
-@RequestMapping(path = "api/v1/personal")
+@RequestMapping(path = "api/v1/realiza")
 public class RealizaController {
     @Autowired
-    private RealizaService personalService;
+    private RealizaService realizaService;
 
     @GetMapping
     public List<Realiza> getAll()
     {
-        return personalService.getAllPersonal();
+        return realizaService.getAllRealiza();
     }
 
-    @GetMapping("/{personalId}")
-    public Optional<Realiza> getPersonalById(@PathVariable("personalId") int id){
-        return personalService.getPersonalById(id);
+    @GetMapping("/{realizaId}")
+    public Optional<Realiza> getRealizaById(@PathVariable("realizaId") int id){
+        return realizaService.getRealizaById(id);
     }
 
     @PostMapping
-    public Realiza create(@RequestBody Realiza personal){
-        personalService.insertOrUpdatePersonal(personal);
-        return personal;
+    public Realiza create(@RequestBody Realiza realiza){
+        realizaService.insertOrUpdateRealiza(realiza);
+        return realiza;
     }
 
-    @DeleteMapping("/{personalId}")
-    public void delete(@PathVariable("personalId") int id){
-        personalService.deletePersonal(id);
+    @DeleteMapping("/{realizaId}")
+    public void delete(@PathVariable("realizaId") int id){
+        realizaService.deleteRealiza(id);
     }
 }

@@ -1,31 +1,32 @@
 package com.example.Crud.service;
 
-import com.example.Crud.entity.PlanEstudio;
-import com.example.Crud.repository.PlanEstudioRepository;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import com.example.Crud.entity.PlanEstudio;
+import com.example.Crud.repository.PlanEstudioRepository;
 
 @Service
 public class PlanEstudioService {
     @Autowired
-    PlanEstudioRepository personalRepository;
+    PlanEstudioRepository planestudioRepository;
 
-    public List<PlanEstudio> getAllPersonal(){
-        return personalRepository.findAll();
+    public List<PlanEstudio> getAllPlanEstudio(){
+        return planestudioRepository.findAll();
     }
 
-    public Optional<PlanEstudio> getPersonalById(int id){
-        return personalRepository.findById(id);
+    public Optional<PlanEstudio> getPlanEstudioById(int id){
+        return planestudioRepository.findById(id);
     }
 
-    public void insertOrUpdatePersonal(PlanEstudio personal){
-        personalRepository.save(personal);
+    public void insertOrUpdatePlanEstudio(PlanEstudio plandeestudio){
+        planestudioRepository.save(plandeestudio);
     }
 
-    public void deletePersonal(int id){
-        personalRepository.deleteById(id);
+    public void deletePlanEstudio(int id){
+        planestudioRepository.deleteById(id);
     }
 }

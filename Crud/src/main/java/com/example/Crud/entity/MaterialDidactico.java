@@ -13,24 +13,20 @@ public class MaterialDidactico {
     //generacion de id autoincremental
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int dni;
+    private int materialDidacticoId;
 
-    private String nombre;
+    private String tipo;
 
-    private String apellido;
+    private String rutaArchivo;
 
-    private String correo;
+    private String observacion;
 
-    private String contraseña;
+    private int calificacion;
 
-    private String sexo;
+    private int materialId;
 
-    private Date fechaDeNacimiento;
+    private int alumnoDni;
 
-    private int horas;
-
-    private String especialidad;
-
-    private int EsAdministrativo;
+    private int profesorDni;
 
 }

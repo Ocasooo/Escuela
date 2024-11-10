@@ -1,31 +1,32 @@
 package com.example.Crud.service;
 
-import com.example.Crud.entity.Contiene;
-import com.example.Crud.repository.ContieneRepository;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import com.example.Crud.entity.Contiene;
+import com.example.Crud.repository.ContieneRepository;
 
 @Service
 public class ContieneService {
     @Autowired
-    ContieneRepository personalRepository;
+    ContieneRepository contieneRepository;
 
-    public List<Contiene> getAllPersonal(){
-        return personalRepository.findAll();
+    public List<Contiene> getAllContiene(){
+        return contieneRepository.findAll();
     }
 
-    public Optional<Contiene> getPersonalById(int id){
-        return personalRepository.findById(id);
+    public Optional<Contiene> getContieneById(int id){
+        return contieneRepository.findById(id);
     }
 
-    public void insertOrUpdatePersonal(Contiene personal){
-        personalRepository.save(personal);
+    public void insertOrUpdateContiene(Contiene contiene){
+        contieneRepository.save(contiene);
     }
 
-    public void deletePersonal(int id){
-        personalRepository.deleteById(id);
+    public void deleteContiene(int id){
+        contieneRepository.deleteById(id);
     }
 }

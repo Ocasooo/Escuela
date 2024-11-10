@@ -1,9 +1,13 @@
 package com.example.Crud.entity;
 
-import jakarta.persistence.*;
-import lombok.Data;
-
 import java.sql.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
 
 @Entity
 @Data
@@ -13,24 +17,20 @@ public class MensajeForo {
     //generacion de id autoincremental
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int dni;
+    private int mensajeId;
 
-    private String nombre;
+    private int foroId;
 
-    private String apellido;
+    private Date fechaDeEnvio;
 
-    private String correo;
+    private String rutaArchivo;
 
-    private String contraseña;
+    private String contenido;
 
-    private String sexo;
+    private String asunto;
 
-    private Date fechaDeNacimiento;
+    private int alumnoDni;
 
-    private int horas;
-
-    private String especialidad;
-
-    private int EsAdministrativo;
+    private int profesorDni;
 
 }

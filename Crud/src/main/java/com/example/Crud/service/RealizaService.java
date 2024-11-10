@@ -1,31 +1,32 @@
 package com.example.Crud.service;
 
-import com.example.Crud.entity.Realiza;
-import com.example.Crud.repository.RealizaRepository;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import com.example.Crud.entity.Realiza;
+import com.example.Crud.repository.RealizaRepository;
 
 @Service
 public class RealizaService {
     @Autowired
-    RealizaRepository personalRepository;
+    RealizaRepository realizaRepository;
 
-    public List<Realiza> getAllPersonal(){
-        return personalRepository.findAll();
+    public List<Realiza> getAllRealiza(){
+        return realizaRepository.findAll();
     }
 
-    public Optional<Realiza> getPersonalById(int id){
-        return personalRepository.findById(id);
+    public Optional<Realiza> getRealizaById(int id){
+        return realizaRepository.findById(id);
     }
 
-    public void insertOrUpdatePersonal(Realiza personal){
-        personalRepository.save(personal);
+    public void insertOrUpdateRealiza(Realiza realiza){
+        realizaRepository.save(realiza);
     }
 
-    public void deletePersonal(int id){
-        personalRepository.deleteById(id);
+    public void deleteRealiza(int id){
+        realizaRepository.deleteById(id);
     }
 }

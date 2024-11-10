@@ -13,24 +13,16 @@ public class Examen {
     //generacion de id autoincremental
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int dni;
+    private int examenId;
 
-    private String nombre;
+    private String rutaExamen;
 
-    private String apellido;
+    private String descripcion;
 
-    private String correo;
+    private int calificacion;
 
-    private String contraseña;
+    private int personalDni;
 
-    private String sexo;
-
-    private Date fechaDeNacimiento;
-
-    private int horas;
-
-    private String especialidad;
-
-    private int EsAdministrativo;
+    private int alumnoDni;
 
 }

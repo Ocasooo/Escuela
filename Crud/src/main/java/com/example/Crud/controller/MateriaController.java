@@ -1,38 +1,45 @@
 package com.example.Crud.controller;
 
-import com.example.Crud.entity.Materia;
-import com.example.Crud.service.MateriaService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.Crud.entity.Materia;
+import com.example.Crud.service.MateriaService;
+
 @RestController
-@RequestMapping(path = "api/v1/personal")
+@RequestMapping(path = "api/v1/materia")
 public class MateriaController {
     @Autowired
-    private MateriaService personalService;
+    private MateriaService materiaService;
 
     @GetMapping
     public List<Materia> getAll()
     {
-        return personalService.getAllPersonal();
+        return materiaService.getAllMateria();
     }
 
-    @GetMapping("/{personalId}")
-    public Optional<Materia> getPersonalById(@PathVariable("personalId") int id){
-        return personalService.getPersonalById(id);
+    @GetMapping("/{materiaId}")
+    public Optional<Materia> getMateriaById(@PathVariable("materiaId") int id){
+        return materiaService.getMateriaById(id);
     }
 
     @PostMapping
-    public Materia create(@RequestBody Materia personal){
-        personalService.insertOrUpdatePersonal(personal);
-        return personal;
+    public Materia create(@RequestBody Materia materia){
+        materiaService.insertOrUpdateMateria(materia);
+        return materia;
     }
 
-    @DeleteMapping("/{personalId}")
-    public void delete(@PathVariable("personalId") int id){
-        personalService.deletePersonal(id);
+    @DeleteMapping("/{materiaId}")
+    public void delete(@PathVariable("materiaId") int id){
+        materiaService.deleteMateria(id);
     }
 }

@@ -11,21 +11,21 @@ import java.util.Optional;
 @Service
 public class BuzonService {
     @Autowired
-    BuzonRepository personalRepository;
+    BuzonRepository BuzonRepository;
 
-    public List<Buzon> getAllPersonal(){
-        return personalRepository.findAll();
+    public List<Buzon> getAllBuzon(){
+        return BuzonRepository.findAll();
     }
 
-    public Optional<Buzon> getPersonalById(int id){
-        return personalRepository.findById(id);
+    public Optional<Buzon> getBuzonById(int id){
+        return BuzonRepository.findById(id);
     }
 
-    public void insertOrUpdatePersonal(Buzon personal){
-        personalRepository.save(personal);
+    public void insertOrUpdateBuzon(Buzon Buzon){
+        BuzonRepository.save(Buzon);
     }
 
-    public void deletePersonal(int id){
-        personalRepository.deleteById(id);
+    public void deleteBuzon(int id){
+        BuzonRepository.deleteById(id);
     }
 }

@@ -12,21 +12,21 @@ import java.util.Optional;
 @Service
 public class InscriptoService {
     @Autowired
-    InscriptoRepository personalRepository;
+    InscriptoRepository inscriptoRepository;
 
-    public List<Inscripto> getAllPersonal(){
-        return personalRepository.findAll();
+    public List<Inscripto> getAllInscripto(){
+        return inscriptoRepository.findAll();
     }
 
-    public Optional<Inscripto> getPersonalById(int id){
-        return personalRepository.findById(id);
+    public Optional<Inscripto> getInscriptoById(int id){
+        return inscriptoRepository.findById(id);
     }
 
-    public void insertOrUpdatePersonal(Inscripto personal){
-        personalRepository.save(personal);
+    public void insertOrUpdateInscripto(Inscripto inscripto){
+        inscriptoRepository.save(inscripto);
     }
 
-    public void deletePersonal(int id){
-        personalRepository.deleteById(id);
+    public void deleteInscripto(int id){
+        inscriptoRepository.deleteById(id);
     }
 }
