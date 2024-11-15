@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import '../css/style.css';
 ---
 
 <!doctype html>
@@ -28,13 +29,13 @@ const { title } = Astro.props;
 			  <!--left options -->
 				<div class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto">
 				<ul class="md:ml-auto md:pr-4 flex flex-row justify-end pl-0 mb-0 list-none md-max:w-full">
-					  <li class="flex items-center">
+					<li class="flex items-center">
 						<a href="#" class="block px-0 py-2 text-sm font-semibold text-white transition-all ease-nav-brand">
 							<i class="fa-solid fa-message" style="color: black;"></i>
 						</a>
-					  </li>
-				  <li class="flex items-center">
-					<div id="dropdownButton" class="py-1 px-2 flex relative rounded-3xl text-black text-sm ml-10 mr-0 text-white bg-blue-700">
+					</li>
+					<li class="flex items-center">
+					<div id="dropdownButton" class="test py-1 px-2 flex relative rounded-3xl text-black text-sm ml-10 mr-0 text-white bg-blue-700">
 						<button id="buttonText" class="ml-2 mr-3">Juan riquelme</button>
 						<div id="dropdownContent" class="dropdown-content hidden absolute bg-white w-full shadow-lg rounded-sm border-2 left-0 z-10 text-black">
 							<a href="">Perfil</a>
@@ -42,10 +43,7 @@ const { title } = Astro.props;
 						</div>
 						<img src="../../public/img/usuario-de-perfil.png" alt="" class="w-10">
 					</div>
-					
-
-
-				  </li>
+				  	</li>
 				</ul>
 				<!-- FIN Sign in Menu(flex) config notificacion box -->
 			  </div>
@@ -64,12 +62,13 @@ const { title } = Astro.props;
             dropmenu?.classList.remove("hidden")
         }
         else
-            dropmenu?.classList.add("hidden")
+		{
+			dropmenu?.classList.add("hidden")
+		}
         })
 </script>
 
 <style>
-
 	.dropdown-content a {
 	  color: black;
 	  padding: 12px 16px;
