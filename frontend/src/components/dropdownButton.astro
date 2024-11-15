@@ -41,6 +41,7 @@ const { buttonText,options } = Astro.props;
 </style>
 
 <script>
+    //@ts-nocheck 
     //MENU DESPLEGABLE
     const  drop = document.querySelector("#dropdownButtonOption")
     const dropmenu = document.querySelector("#dropdownContentOption")
@@ -53,7 +54,7 @@ const { buttonText,options } = Astro.props;
             dropmenu?.classList.add("hidden")
         }})
 
-    //OPCIONES 
+    //OPCIONES
     const options : any = dropmenu?.childNodes
     options.forEach(child=> {
         child.addEventListener("click",()=>{
