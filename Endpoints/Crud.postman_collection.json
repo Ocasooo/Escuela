@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "0129d896-0b7a-4491-8295-5f24fec593cf",
+		"name": "Crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39461869",
+		"_collection_link": "https://diseompz.postman.co/workspace/Dise%C3%B1o~c95282fa-9863-4a75-84b2-fcec091c48b6/collection/39461869-0129d896-0b7a-4491-8295-5f24fec593cf?action=share&source=collection_link&creator=39461869"
+	},
+	"item": [
+		{
+			"name": "ObtenerClases",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/clase",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"clase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsetarClase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Aula\",\r\n    \"aula\": \"4\",\r\n    \"fehca_hora\": \"2024-01-01'T'10:00:00.000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/clase",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"clase"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
